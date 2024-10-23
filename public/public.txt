@@ -1,3 +1,0 @@
-1. */public*:
-   - Contiene los archivos estáticos que se entregarán directamente al navegador, como HTML, CSS, JavaScript del frontend, imágenes y códigos QR.
-   - La subcarpeta /forms contendrá los formularios individuales (1/4, 2/4, etc.) que cada código QR debe cargar.
