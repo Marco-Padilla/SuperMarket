@@ -1,195 +1,317 @@
 /* Estilos generales para todos los dispositivos */
 body {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    
-    /* Imagen de fondo */
-    background-image: url('../img/backgrounds/fondo.png');
-    background-size: cover; /* Hace que la imagen de fondo cubra toda la pantalla */
-    background-position: center; /* Centra la imagen en la pantalla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    
-    margin: 0;
-    padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-image: url('../img/backgrounds/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 form .custominp {
-    border-radius: 20px;
-    height: 2rem;
-    width: 15rem;
-    margin-left: 2%;
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-    color: black;
+  border-radius: 20px;
+  height: 2rem;
+  width: 15rem;
+  margin: auto;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  color: black;
 }
 
 .custominp::placeholder {
-    text-align: center;
-    color: black;
+  text-align: center;
+  color: black;
 }
 
 .formulario {
-    border: 2px solid white;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
+  border: 2px solid white;
+  border-radius: 12px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  width: 50%;
+  margin: auto;
 }
 
-h1 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 70px;
-    font-weight: 800;
-    color: #000000;
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #000000;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.progreso-llantas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.progreso-llantas img {
+  width: 50px;
+  height: auto;
 }
 
 .nave {
-    border-radius: 12px;
-    width: 25vw;
-    height: 15vh;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 15px 15px 10px gray;
-    animation: slider 15s linear infinite;
+  border-radius: 12px;
+  width: 40vw;
+  height: 15vh;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1px 1px 20px white);
+  animation: slider 15s linear infinite;
+  margin: auto;
+}
+
+.nave img {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 .imgbn {
-    filter: drop-shadow(1px 1px 20px white);
+  width: 40%;
+  filter: drop-shadow(1px 1px 20px white);
+}
+
+.ruleta-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.ruleta {
+  width: 100%;
+  height: 100%;
+  transition: transform 3s ease-out;
+}
+
+.btn {
+  margin-top: 2rem;
 }
 
 @keyframes slider {
-    0%{background-image: url('../img/backgrounds/marca1.png');}
-    33%{background-image: url('../img/backgrounds/marca1.png');}
-    34%{background-image: url('../img/backgrounds/marca2.png');}
-    66%{background-image: url('../img/backgrounds/marca2.png');}
-    67%{background-image: url('../img/backgrounds/marca3.png');}
-    100%{background-image: url('../img/backgrounds/marca3.png');}
+  0% {
+    background-image: url('../img/backgrounds/marca1.png');
+  }
+  33% {
+    background-image: url('../img/backgrounds/marca1.png');
+  }
+  34% {
+    background-image: url('../img/backgrounds/marca2.png');
+  }
+  66% {
+    background-image: url('../img/backgrounds/marca2.png');
+  }
+  67% {
+    background-image: url('../img/backgrounds/marca3.png');
+  }
+  100% {
+    background-image: url('../img/backgrounds/marca3.png');
+  }
 }
 
-/* Media Queries para dispositivos móviles */
+/* Media Queries para tablets */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        background-image: url('../img/backgrounds/fondo1.png');
-        background-size: cover;
-        background-position: center;
-        overflow-x: hidden;
-    }
+  body {
+    font-size: 14px;
+    background-image: url('../img/backgrounds/fondo1.png');
+    overflow-x: hidden;
+  }
 
-    h1 {
-        font-size: 40px;
-    }
+  h1 {
+    font-size: 40px;
+  }
 
-    .custominp {
-        width: 12rem;
-        height: 1.8rem;
-    }
+  .custominp {
+    width: 12rem;
+    height: 1.8rem;
+  }
 
-    .formulario {
-        padding: 10px;
-        margin: 0 auto;
-        width: 90%;
-    }
+  .formulario {
+    width: 90%;
+  }
 
-    .formulario img {
-        width: 30vw;
-    }
+  .formulario img {
+    width: 40vw;
+  }
 
-    .nave {
-        width: 70vw;
-        height: 20vh;
-    }
+  .nave {
+    width: 70vw;
+    height: 20vh;
+  }
 
-    .bienvenida img {
-        width: 80vw;
-    }
+  .bienvenida img {
+    width: 80vw;
+  }
 
-    .bienvenida {
-        width: 90%;
-    }
+  .bienvenida {
+    width: 100%;
+  }
+
+  .ruleta-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 
-/* Media Queries para dispositivos muy pequeños (menos de 480px) */
+/* Estilos generales para móviles */
 @media (max-width: 480px) {
-    body {
-        font-size: 12px;
-        background-image: url('../img/backgrounds/fondo2.png');
-        background-size: cover;
-        background-position: center;
-        overflow-x: hidden;
-    }
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-    h1 {
-        font-size: 30px;
-    }
+  body {
+    font-size: 12px;
+    background-image: url('../img/backgrounds/fondo2.png');
+    margin: 0;
+    padding: 0;
+  }
 
-    .custominp {
-        width: 10rem;
-        height: 1.6rem;
-    }
+  h1 {
+    font-size: 30px;
+  }
 
-    .formulario {
-        padding: 5px;
-        width: 100%;
-    }
+  .custominp {
+    width: 100%;
+    max-width: 10rem;
+    height: 1.6rem;
+    box-sizing: border-box;
+  }
 
-    .formulario img {
-        width: 30vw;
-    }
+  .formulario {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
 
-    .nave {
-        width: 80vw;
-        height: 15vh;
-    }
+  .formulario img {
+    width: 100%;
+    max-width: 50vw;
+    height: auto;
+  }
 
-    .bienvenida img {
-        width: 80vw;
-    }
+  .nave {
+    width: 100%;
+    max-width: 80vw;
+    height: 15vh;
+    box-sizing: border-box;
+  }
 
-    .bienvenida {
-        width: 90%;
-    }
+  .bienvenida {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bienvenida img {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .ruleta-container {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 16px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }
 
-/* Media Queries para dispositivos aún más pequeños (menos de 360px) */
 @media (max-width: 360px) {
-    body {
-        font-size: 12px;
-        background-image: url('../img/backgrounds/fondo3.png');
-        background-size: cover;
-        background-position: center;
-        overflow-x: hidden;
-    }
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
-    h1 {
-        font-size: 24px;
-    }
+  body {
+    font-size: 10px;
+    background-image: url('../img/backgrounds/fondo3.png');
+    margin: 0;
+    padding: 0;
+  }
 
-    .custominp {
-        width: 9rem;
-        height: 1.4rem;
-    }
+  h1 {
+    font-size: 24px;
+  }
 
-    .formulario {
-        padding: 5px;
-        width: 100%;
-    }
+  .custominp {
+    width: 100%;
+    max-width: 9rem;
+    height: 1.4rem;
+    box-sizing: border-box;
+  }
 
-    .formulario img {
-        width: 30vw;
-    }
+  .formulario {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
 
-    .nave {
-        width: 90vw;
-        height: 12vh;
-    }
+  .formulario img {
+    width: 100%;
+    max-width: 60vw;
+    height: auto;
+  }
 
-    .bienvenida img {
-        width: 80vw;
-    }
+  .nave {
+    width: 100%;
+    max-width: 90vw;
+    height: 12vh;
+    box-sizing: border-box;
+  }
 
-    .bienvenida {
-        width: 90%;
-    }
+  .bienvenida {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bienvenida img {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .ruleta-container {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+
+  .btn {
+    font-size: 10px;
+    padding: 6px 12px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }
